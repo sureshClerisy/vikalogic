@@ -1,5 +1,5 @@
 mysql:
-  build: mysql
+  image: mysql
   container_name: vika-mysql
   environment:
     MYSQL_USER: vika
@@ -23,7 +23,7 @@ datastore:
   volumes:
     - /var/lib/mysql
 php:
-  build: php
+  image: php:5.6.29-apache
   container_name: vika-container
   ports:
     - '80:80'
